@@ -11,19 +11,15 @@ import com.project.mvo.models.Test;
 import com.project.mvo.services.TestService;
 
 @RestController
-@RequestMapping({ "/v1" })
+@RequestMapping({ "/" })
 public class TestController {
 
 	@Autowired
 	TestService testService;
 
-	@GetMapping("/user")
+	@GetMapping("/")
 	public List<Test> listar() {
 		return testService.listAllUser();
 	}
 	
-	@GetMapping("/prueba")
-	public String prueba() {
-		return "Bienvenido";
-	}
 }
